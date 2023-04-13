@@ -1,0 +1,13 @@
+@font-face{
+    font-family: HelpMe;
+    src: url("../assets/police/HelpMe.ttf");
+}
+
+body {
+    overflow-x: hidden;
+}
+
+h1 {
+    font-family: HelpMe;
+    text-align: center;
+}
