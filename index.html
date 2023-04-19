@@ -1,27 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <!-- Lien pour Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/img/Favicon.png" />
-    <title>Je te vois</title>
-  </head>
-  <body>
-    <header>
-      <h1>Je te vois Julia</h1>
-      <div class="paragraph">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <!-- Lien pour Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+  <title>Je te vois</title>
+</head>
+
+<body class="is-scrolling">
+  <header>
+    <h1>Je te vois Julia</h1>
+
+    <div class="cta">
+      <img src="assets/img/img_element_visuels/scroll.png" width="100px;">
+      <img class="mouse" src="assets/img/img_element_visuels/scroll2.png" width="60px;">
+      <h2 class="glow">Défilez</h2>
+    </div>
+    <div class="paragraph">
       <p>
         Projet créé dans le cadre du cours Optimisation Web - Intégration
         multimédia - Collège Montmorency. <br />
         © 2023 - Conception : Pierre-Luc Proulx et Antoine Dion| Développement Web : Pierre-Luc Proulx
       </p>
     </div>
-    </header>
-    <main>
-        
-    </main>
-  </body>
+  </header>
+  <main>
+
+    <section class="section no1">
+      <div class="banner">
+        <img class="image" src="assets/img/img_background/dion_proulx_scene_01_582-424.jpg" alt="scène1">
+      </div>
+    </section>
+    <section class="section no2">
+      <div class="banner">
+        <img class="image" src="assets/img/img_background/dion_proulx_scene_02_582-424.jpg" alt="scene2">
+        <img class="element"
+          src="assets/img/img_element_visuels/dion_proulx_elements_lineaire_582-424/dion_proulx_element_lineaire_04_582-424.png">
+      </div>
+    </section>
+  </main>
+  <fieldset>
+    <div id="fullscreen-div">
+      <input type="checkbox" class="toggle-fullscreen-btn" style="border-radius: 15px;" id="option1">
+    </div>
+  </fieldset>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+  <script src="script/script.js"></script>
+
+</body>
+
 </html>
