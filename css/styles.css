@@ -125,7 +125,7 @@ input[type="checkbox"]::after {
   height: 1080px;
   width: 1170px;
   animation-name: test;
-  animation-duration: 2.5s;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-timing-function: steps(48);
   animation-play-state: paused;
