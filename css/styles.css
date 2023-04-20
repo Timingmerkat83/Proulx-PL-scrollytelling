@@ -115,3 +115,23 @@ input[type="checkbox"]::after {
   font-family: HelpMe;
   color: red;
 }
+
+
+.SpriteSheet{
+  background-image: url("../assets/img/img_personnages/Monstre/Monstrespritesheet.png");
+  background-size: cover;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  height: 1080px;
+  width: 1170px;
+  animation-name: test;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(48);
+  animation-play-state: paused;
+}
+
+@keyframes test {
+  from {background-position: 0 0;}
+  to {background-position: -56160px 0}
+}

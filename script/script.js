@@ -19,3 +19,9 @@ stagger: '0.1',
 yoyo: true,
 repeat: '-1'
 });
+
+
+window.addEventListener('scroll', (event)=> {
+   document.body.classList.add('.is-scrolling');
+
+});
