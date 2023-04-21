@@ -4,7 +4,7 @@ window.addEventListener('scroll', (event) => {
    body.classList.add('is-scrolling');
    setTimeout(function(){
       body.classList.remove('is-scrolling');
-   }, 300);
+   }, 100);
    console.log("La page scroll!");
 
 });

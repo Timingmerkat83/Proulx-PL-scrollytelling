@@ -131,6 +131,10 @@ input[type="checkbox"]::after {
   animation-play-state: paused;
 }
 
+.is-scrolling .SpriteSheet{
+  animation-play-state: running;
+}
+
 @keyframes test {
   from {background-position: 0 0;}
   to {background-position: -56160px 0}
