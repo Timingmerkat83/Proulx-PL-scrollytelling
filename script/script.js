@@ -1,3 +1,13 @@
+const body = document.querySelector('body');
+
+window.addEventListener('scroll', (event) => {
+   body.classList.add('is-scrolling');
+   setTimeout(function(){
+      body.classList.remove('is-scrolling');
+   }, 300);
+   console.log("La page scroll!");
+
+});
 gsap.registerPlugin(ScrollTrigger);
 const Scroll = document.querySelector(".mouse");
 
@@ -18,10 +28,4 @@ rotation: '180',
 stagger: '0.1',
 yoyo: true,
 repeat: '-1'
-});
-
-
-window.addEventListener('scroll', (event)=> {
-   document.body.classList.add('.is-scrolling');
-
 });
