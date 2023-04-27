@@ -79,6 +79,16 @@ header {
   margin: 0;
 }
 
+.chapterText {
+  font-family: ScaryFont;
+  color: white;
+  font-size: 2vw;
+  text-shadow: 3px 2px 2px black;
+  position: absolute;
+  z-index: 1;
+  left: 10vw;
+}
+
 .banner {
   position: relative;
   width: 100vw;
@@ -116,8 +126,7 @@ input[type="checkbox"]::after {
   color: red;
 }
 
-
-.SpriteSheet{
+.SpriteSheet {
   background-image: url("../assets/img/img_personnages/Monstre/Monstrespritesheet.png");
   background-size: cover;
   background-position: 0 0;
@@ -131,11 +140,15 @@ input[type="checkbox"]::after {
   animation-play-state: paused;
 }
 
-.is-scrolling .SpriteSheet{
+.is-scrolling .SpriteSheet {
   animation-play-state: running;
 }
 
 @keyframes test {
-  from {background-position: 0 0;}
-  to {background-position: -56160px 0}
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -56160px 0;
+  }
 }
