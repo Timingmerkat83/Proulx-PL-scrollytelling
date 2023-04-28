@@ -126,7 +126,7 @@ input[type="checkbox"]::after {
   color: red;
 }
 
-.SpriteSheet {
+.SpriteSheetMonster {
   background-image: url("../assets/img/img_personnages/Monstre/Monstrespritesheet.png");
   background-size: cover;
   background-position: 0 0;
@@ -151,4 +151,8 @@ input[type="checkbox"]::after {
   to {
     background-position: -56160px 0;
   }
+}
+
+img{
+  border-color:  red 4px;
 }
