@@ -94,6 +94,7 @@ section:nth-child(2){
   background-image: url("../assets/img/img_background/dion_proulx_scene_02_582-424.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position-y: center;
 }
 
 /* Styles chapitre 3*/
@@ -101,6 +102,7 @@ section:nth-child(3){
   background-image: url("../assets/img/img_background/dion_proulx_scene_03_582-424.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position-y: center;
 }
 
 
@@ -121,7 +123,7 @@ section:nth-child(5){
 /* Styles chapitre 6*/
 section:nth-child(6){
   background-image: url("../assets/img/img_background/dion_proulx_scene_06_582-424.jpg");
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
