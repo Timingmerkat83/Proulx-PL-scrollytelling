@@ -16,6 +16,7 @@ body {
   margin: 0;
   overflow-x: hidden;
 }
+
 /* Styles du Header*/
 h1 {
   font-family: HelpMe;
@@ -52,6 +53,7 @@ header {
   position: absolute;
   bottom: 10em;
 }
+
 .scrollmouse {
   position: absolute;
   bottom: 3em;
@@ -77,20 +79,20 @@ header {
   margin: 0;
 }
 
-section{
-width: 100vw;
-height: 100vh;
+section {
+  width: 100vw;
+  height: 100vh;
 }
 
 /* Styles chapitre 1*/
-section:first-of-type{
+section:first-of-type {
   background-image: url("../assets/img/img_background/dion_proulx_scene_01_582-424.jpg");
   background-size: 100vw 100vh;
 }
 
 
 /* Styles chapitre 2*/
-section:nth-child(2){
+section:nth-child(2) {
   background-image: url("../assets/img/img_background/dion_proulx_scene_02_582-424.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -98,7 +100,7 @@ section:nth-child(2){
 }
 
 /* Styles chapitre 3*/
-section:nth-child(3){
+section:nth-child(3) {
   background-image: url("../assets/img/img_background/dion_proulx_scene_03_582-424.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -107,21 +109,21 @@ section:nth-child(3){
 
 
 /* Styles chapitre 4*/
-section:nth-child(4){
+section:nth-child(4) {
   background-image: url("../assets/img/img_background/dion_proulx_scene_04_582-424.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 /* Styles chapitre 5*/
-section:nth-child(5){
+section:nth-child(5) {
   background-image: url("../assets/img/img_background/dion_proulx_scene_05_582-424.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 /* Styles chapitre 6*/
-section:nth-child(6){
+section:nth-child(6) {
   background-image: url("../assets/img/img_background/dion_proulx_scene_06_582-424.jpg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -168,22 +170,20 @@ input[type="checkbox"]::after {
 }
 
 .monster {
- background-image: url("../assets/img/img_personnages/Monstre/Monstrespritesheet.png");
- background-size: cover;
- background-position: 0 0;
- background-repeat: no-repeat;
- height: 1080px;
- width: 1170px;
- aspect-ratio: 16/8;
- animation-name: test;
- animation-duration: 2s;
- animation-iteration-count: infinite;
- animation-timing-function: steps(48);
- animation-play-state: paused;
- z-index: 1;
+
+  height: 1080px;
+  width: 1170px;
+  aspect-ratio: 13 / 12;
+  animation-name: test;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(48);
+  animation-play-state: paused;
+  position: absolute;
+  top: 0;
 }
 
-#SpriteSheet{
+#SpriteSheet {
   border: solid red 3px;
 }
 
@@ -195,11 +195,12 @@ input[type="checkbox"]::after {
   from {
     background-position: 0 0;
   }
+
   to {
     background-position: -56160px 0;
   }
 }
 
-img{
-  border-color:  red 4px;
+img {
+  border-color: red 4px;
 }
