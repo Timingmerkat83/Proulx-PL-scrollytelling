@@ -170,10 +170,9 @@ input[type="checkbox"]::after {
 }
 
 .monster {
-
-  height: 1080px;
+  object-fit:cover;
   width: 1170px;
-  aspect-ratio: 13 / 12;
+  aspect-ratio: 16 / 8;
   animation-name: test;
   animation-duration: 2s;
   animation-iteration-count: infinite;
