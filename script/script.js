@@ -7,19 +7,10 @@ window.addEventListener("scroll", (event) => {
   }, 100);
   console.log("La page scroll!");
 });
+
 gsap.registerPlugin(ScrollTrigger);
 const Scroll = document.querySelector(".mouse");
 
-const fullScreenElement = document.querySelector("#fullscreen-div");
-document
-  .querySelector(".toggle-fullscreen-btn")
-  .addEventListener("click", () => {
-    if (document.fullscreenElement) {
-      document.exitFullscreen();
-    } else {
-      fullScreenElement.requestFullscreen();
-    }
-  });
 /* Animation de l'icône scroll de l'intro*/
 gsap.to(".mouse", {
   duration: "1",
