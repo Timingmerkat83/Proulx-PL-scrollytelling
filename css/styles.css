@@ -42,10 +42,10 @@ header {
   justify-content: space-between;
   align-items: center;
   background-position: center;
+  background-image: url("../assets/img/img_background/intro.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
-  background-image: url("../assets/img/img_background/intro.jpg");
 }
 
 .mouse {
@@ -74,10 +74,58 @@ header {
 /* Styles des sections du main*/
 #chapitre {
   position: relative;
-  width: 100%;
-  height: auto;
   margin: 0;
 }
+
+section{
+width: 100vw;
+height: 100vh;
+}
+
+/* Styles chapitre 1*/
+section:first-of-type{
+  background-image: url("../assets/img/img_background/dion_proulx_scene_01_582-424.jpg");
+  background-size: 100vw 100vh;
+}
+
+
+/* Styles chapitre 2*/
+section:nth-child(2){
+  background-image: url("../assets/img/img_background/dion_proulx_scene_02_582-424.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Styles chapitre 3*/
+section:nth-child(3){
+  background-image: url("../assets/img/img_background/dion_proulx_scene_03_582-424.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+/* Styles chapitre 4*/
+section:nth-child(4){
+  background-image: url("../assets/img/img_background/dion_proulx_scene_04_582-424.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Styles chapitre 5*/
+section:nth-child(5){
+  background-image: url("../assets/img/img_background/dion_proulx_scene_05_582-424.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Styles chapitre 6*/
+section:nth-child(6){
+  background-image: url("../assets/img/img_background/dion_proulx_scene_06_582-424.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
 
 .chapterText {
   font-family: ScaryFont;
@@ -95,15 +143,6 @@ header {
   height: 100vh;
 }
 
-.image {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: contain;
-}
 
 /* Boutons*/
 
@@ -126,18 +165,24 @@ input[type="checkbox"]::after {
   color: red;
 }
 
-.SpriteSheetMonster {
-  background-image: url("../assets/img/img_personnages/Monstre/Monstrespritesheet.png");
-  background-size: cover;
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  height: 1080px;
-  width: 1170px;
-  animation-name: test;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: steps(48);
-  animation-play-state: paused;
+.monster {
+ background-image: url("../assets/img/img_personnages/Monstre/Monstrespritesheet.png");
+ background-size: cover;
+ background-position: 0 0;
+ background-repeat: no-repeat;
+ height: 1080px;
+ width: 1170px;
+ aspect-ratio: 16/8;
+ animation-name: test;
+ animation-duration: 2s;
+ animation-iteration-count: infinite;
+ animation-timing-function: steps(48);
+ animation-play-state: paused;
+ z-index: 1;
+}
+
+#SpriteSheet{
+  border: solid red 3px;
 }
 
 .is-scrolling .SpriteSheet {
