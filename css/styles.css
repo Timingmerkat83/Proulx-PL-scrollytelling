@@ -172,7 +172,7 @@ input[type="checkbox"]::after {
 .monster {
   object-fit: cover ;
   object-position: 0 0;
-  width: 50vw;
+  width: 30vw;
   aspect-ratio: 13 / 12;
   animation-name: test;
   animation-duration: 2s;
@@ -180,7 +180,9 @@ input[type="checkbox"]::after {
   animation-timing-function: steps(48);
   animation-play-state: paused;
   position: absolute;
-  top: 0;
+
+  right: 10vw;
+  bottom: 0;
 }
 
 #SpriteSheet {
