@@ -88,6 +88,8 @@ section {
 section:first-of-type {
   background-image: url("../assets/img/img_background/dion_proulx_scene_01_582-424.jpg");
   background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  background-position-x: center;
 }
 
 
@@ -180,9 +182,18 @@ input[type="checkbox"]::after {
   animation-timing-function: steps(48);
   animation-play-state: paused;
   position: absolute;
-
   right: 10vw;
   bottom: 0;
+}
+
+.house{
+  object-fit: cover;
+  object-position: 0 0;
+  width: 35%;
+  aspect-ratio: 22 / 12;
+  position: absolute;
+  left: 30vw;
+  top: 10vw;
 }
 
 #SpriteSheet {
