@@ -11,6 +11,8 @@ window.addEventListener("scroll", (event) => {
 gsap.registerPlugin(ScrollTrigger);
 const Scroll = document.querySelector(".mouse");
 
+gsap.registerPlugin(MorphSVGPlugin);
+
 /* Animation de l'icône scroll de l'intro*/
 gsap.to(".mouse", {
   duration: "1",
