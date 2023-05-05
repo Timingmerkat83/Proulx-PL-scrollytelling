@@ -8,9 +8,6 @@ window.addEventListener("scroll", (event) => {
   console.log("La page scroll!");
 });
 
-gsap.registerPlugin(ScrollTrigger);
-const Scroll = document.querySelector(".mouse");
-
 gsap.registerPlugin(MorphSVGPlugin);
 /* Animation du morphing*/
 let questionMark = document.querySelector("#QuestionMark");
@@ -18,13 +15,8 @@ let anim = gsap.to(questionMark, {
   morphSVG: "#exclamation"
 });
 
-document.addEventListener("click", function() {
-  console.log("reset");
-  anim.progress(0).pause();
-  const myTimeout = setTimeout(function() {
-    anim.play();
-  }, 1000);
-});
+gsap.registerPlugin(ScrollTrigger);
+const Scroll = document.querySelector(".mouse");
 
 /* Animation de l'icône scroll de l'intro*/
 gsap.to(".mouse", {
@@ -36,3 +28,14 @@ gsap.to(".mouse", {
   yoyo: true,
   repeat: "-1",
 });
+
+
+
+document.addEventListener("click", function() {
+  console.log("reset");
+  anim.progress(0).pause();
+  const myTimeout = setTimeout(function() {
+    anim.play();
+  }, 1000);
+});
+
