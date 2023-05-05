@@ -18,6 +18,20 @@ let anim = gsap.to(questionMark, {
 gsap.registerPlugin(ScrollTrigger);
 const Scroll = document.querySelector(".mouse");
 
+/* Application Pin sur chaque Section */
+
+const sections = gsap.utils.toArray("#chapitre").forEach(function(elem){
+const tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: elem,
+    pin: elem,
+    scrub:0.5,
+    start: "top top",
+    end: '+=200%'
+  },
+})
+});
+
 /* Animation de l'icône scroll de l'intro*/
 gsap.to(".mouse", {
   duration: "1",
