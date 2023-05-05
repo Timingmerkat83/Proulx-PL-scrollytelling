@@ -12,6 +12,19 @@ gsap.registerPlugin(ScrollTrigger);
 const Scroll = document.querySelector(".mouse");
 
 gsap.registerPlugin(MorphSVGPlugin);
+/* Animation du morphing*/
+let questionMark = document.querySelector("#QuestionMark");
+let anim = gsap.to(questionMark, {
+  morphSVG: "#exclamation"
+});
+
+document.addEventListener("click", function() {
+  console.log("reset");
+  anim.progress(0).pause();
+  const myTimeout = setTimeout(function() {
+    anim.play();
+  }, 1000);
+});
 
 /* Animation de l'icône scroll de l'intro*/
 gsap.to(".mouse", {
