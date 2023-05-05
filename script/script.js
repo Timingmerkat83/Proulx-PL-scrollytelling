@@ -20,16 +20,21 @@ const Scroll = document.querySelector(".mouse");
 
 /* Application Pin sur chaque Section */
 
-const sections = gsap.utils.toArray("#chapitre").forEach(function(elem){
+const sections = gsap.utils.toArray("section").forEach(function(elem){
+
+  /* Sélection du texte */
+  const text = elem.querySelectorAll(".chapterText");
 const tl = gsap.timeline({
   scrollTrigger: {
     trigger: elem,
     pin: elem,
     scrub:0.5,
     start: "top top",
-    end: '+=200%'
+    end: '+=200%',
+    markers: true,
   },
 })
+.from(text, {})
 });
 
 /* Animation de l'icône scroll de l'intro*/
