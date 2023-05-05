@@ -171,6 +171,8 @@ input[type="checkbox"]::after {
   color: red;
 }
 
+
+/* Animations Monstre*/
 .monster {
   object-fit: cover ;
   object-position: 0 0;
@@ -185,6 +187,17 @@ input[type="checkbox"]::after {
   right: 10vw;
   bottom: 0;
 }
+
+.eyes{
+  object-fit: cover;
+  object-position: 0 0;
+  width: 20vw;
+  aspect-ratio: 13 / 8;
+  position: absolute;
+  top: 20vh;
+  left: 20vh;
+}
+
 
 .house{
   object-fit: cover;
