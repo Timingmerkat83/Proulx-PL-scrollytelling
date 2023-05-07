@@ -188,6 +188,14 @@ input[type="checkbox"]::after {
   bottom: 0;
 }
 
+.Julia{
+  object-fit: cover ;
+  object-position: 0 0;
+  width: 30vw;
+  aspect-ratio: 13 / 12;
+  filter: grayscale(100%);
+}
+
 .eyes{
   object-fit: cover;
   object-position: 0 0;
@@ -207,6 +215,7 @@ input[type="checkbox"]::after {
   position: absolute;
   left: 30vw;
   top: 10vw;
+  filter: grayscale(100%);
 }
 
 #SpriteSheet {
