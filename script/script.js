@@ -20,7 +20,18 @@ let anim = gsap.to(questionMark, {
 gsap.registerPlugin(ScrollTrigger);
 const Scroll = document.querySelector(".mouse");
 
-/* Application Pin sur chaque Section */
+
+/* Animation chapitre 1 */
+
+/* Animation chapitre 2 */
+
+/* Animation chapitre 3 */
+
+/* Animation chapitre 4 */
+
+/* Animation chapitre 5 */
+
+/* Animation chapitre 6 */
 
 const sections = gsap.utils.toArray("#chapitre").forEach(function(elem){
 
