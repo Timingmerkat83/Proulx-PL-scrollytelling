@@ -1,3 +1,5 @@
+console.clear();
+
 const body = document.querySelector("body");
 
 window.addEventListener("scroll", (event) => {
@@ -20,7 +22,7 @@ const Scroll = document.querySelector(".mouse");
 
 /* Application Pin sur chaque Section */
 
-const sections = gsap.utils.toArray("section").forEach(function(elem){
+const sections = gsap.utils.toArray("#chapitre").forEach(function(elem){
 
   /* Sélection du texte */
   const text = elem.querySelectorAll(".chapterText");
