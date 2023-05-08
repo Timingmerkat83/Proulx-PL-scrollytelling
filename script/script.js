@@ -10,45 +10,101 @@ window.addEventListener("scroll", (event) => {
   console.log("La page scroll!");
 });
 
-gsap.registerPlugin(MorphSVGPlugin);
-/* Animation du morphing*/
-let questionMark = document.querySelector("#QuestionMark");
-let anim = gsap.to(questionMark, {
-  morphSVG: "#exclamation"
-});
+// gsap.registerPlugin(MorphSVGPlugin);
+// /* Animation du morphing*/
+// let questionMark = document.querySelector("#QuestionMark");
+// let anim = gsap.to(questionMark, {
+//   morphSVG: "#exclamation"
+// });
+
+gsap.registerPlugin(MotionPathPlugin);
 
 gsap.registerPlugin(ScrollTrigger);
 const Scroll = document.querySelector(".mouse");
 
+const chapterTextArr = document.querySelectorAll(".chapterText");
 
 /* Animation chapitre 1 */
-
-/* Animation chapitre 2 */
-
-/* Animation chapitre 3 */
-
-/* Animation chapitre 4 */
-
-/* Animation chapitre 5 */
-
-/* Animation chapitre 6 */
-
-const sections = gsap.utils.toArray("#chapitre").forEach(function(elem){
-
-  /* Sélection du texte */
-  const text = elem.querySelectorAll(".chapterText");
-const tl = gsap.timeline({
+let chapter01 = gsap.timeline().to(".no1", {
   scrollTrigger: {
-    trigger: elem,
-    pin: elem,
-    scrub:0.5,
+    trigger: ".no1",
+    pin: true,
+    scrub: true,
     start: "top top",
-    end: '+=200%',
+    end: "+=200%",
     markers: true,
   },
-})
-.from(text, {})
 });
+
+gsap.to(".leaf", {
+  transformOrigin: "0 0",
+  motionPath: {
+    path: [
+      { x: 125, y: 150 },
+      { x: 1000, y: 100 },
+      { x: 2000, y: 150 },
+    ],
+  },
+  duration: 3,
+  rotation: "360",
+  repeat: -1,
+});
+
+/* Animation chapitre 2 */
+gsap.timeline().to(".no2", {
+  scrollTrigger: {
+    trigger: ".no2",
+    pin: true,
+    scrub: 0.5,
+    end: "+=100%",
+    markers: true,
+  },
+});
+/* Animation chapitre 3 */
+gsap.timeline().to(".no3", {
+  scrollTrigger: {
+    trigger: ".no3",
+    pin: true,
+    scrub: 0.5,
+    start: "top top",
+    end: "+=100%",
+    markers: true,
+  },
+});
+/* Animation chapitre 4 */
+gsap.timeline().to(".no4", {
+  scrollTrigger: {
+    trigger: ".no4",
+    pin: true,
+    scrub: 0.5,
+    start: "top top",
+    end: "+=100%",
+    markers: true,
+  },
+});
+/* Animation chapitre 5 */
+gsap.timeline().to(".no5", {
+  scrollTrigger: {
+    trigger: ".no5",
+    pin: true,
+    scrub: 0.5,
+    start: "top top",
+    end: "+=100%",
+    markers: true,
+  },
+});
+/* Animation chapitre 6 */
+gsap.timeline().to(".no6", {
+  scrollTrigger: {
+    trigger: ".no6",
+    pin: true,
+    scrub: 0.5,
+    start: "top top",
+    end: "+=100%",
+    markers: true,
+  },
+});
+/* Sélection du texte */
 
 /* Animation de l'icône scroll de l'intro*/
 gsap.to(".mouse", {
@@ -61,13 +117,10 @@ gsap.to(".mouse", {
   repeat: "-1",
 });
 
-
-
-document.addEventListener("click", function() {
+document.addEventListener("click", function () {
   console.log("reset");
   anim.progress(0).pause();
-  const myTimeout = setTimeout(function() {
+  const myTimeout = setTimeout(function () {
     anim.play();
   }, 1000);
 });
-

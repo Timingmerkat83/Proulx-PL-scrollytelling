@@ -92,7 +92,6 @@ section:first-of-type {
   background-position-x: center;
 }
 
-
 /* Styles chapitre 2*/
 section:nth-child(2) {
   background-image: url("../assets/img/img_background/dion_proulx_scene_02_582-424.jpg");
@@ -108,7 +107,6 @@ section:nth-child(3) {
   background-repeat: no-repeat;
   background-position-y: center;
 }
-
 
 /* Styles chapitre 4*/
 section:nth-child(4) {
@@ -131,8 +129,8 @@ section:nth-child(6) {
   background-repeat: no-repeat;
 }
 
-ul.technique-gsap{
-  background: rgba(0,0,0,0.3);
+ul.technique-gsap {
+  background: rgba(0, 0, 0, 0.3);
   color: white;
   font-size: 10px;
   font-family: monospace;
@@ -148,10 +146,9 @@ ul.technique-gsap{
   left: 0;
 }
 
-ul.technique-gsap li{
+ul.technique-gsap li {
   margin: 5px 0;
 }
-
 
 .chapterText {
   font-family: ScaryFont;
@@ -168,7 +165,6 @@ ul.technique-gsap li{
   width: 100vw;
   height: 100vh;
 }
-
 
 /* Boutons*/
 
@@ -191,10 +187,9 @@ input[type="checkbox"]::after {
   color: red;
 }
 
-
 /* Animations Monstre*/
 .monster {
-  object-fit: cover ;
+  object-fit: cover;
   object-position: 0 0;
   width: 30vw;
   aspect-ratio: 13 / 12;
@@ -208,15 +203,15 @@ input[type="checkbox"]::after {
   bottom: 0;
 }
 
-.Julia{
-  object-fit: cover ;
+.Julia {
+  object-fit: cover;
   object-position: 0 0;
   width: 30vw;
   aspect-ratio: 13 / 12;
   filter: grayscale(100%);
 }
 
-.eyes{
+.eyes {
   object-fit: cover;
   object-position: 0 0;
   width: 20vw;
@@ -226,8 +221,12 @@ input[type="checkbox"]::after {
   left: 20vh;
 }
 
+.leaf {
+  position: absolute;
+  top: 50%;
+}
 
-.house{
+.house {
   object-fit: cover;
   object-position: 0 0;
   width: 35%;
