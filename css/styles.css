@@ -188,27 +188,61 @@ input[type="checkbox"]::after {
 }
 
 /* Animations Monstre*/
-.monster {
-  object-fit: cover;
-  object-position: 0 0;
+#monstre {
+  background-image: url("../assets/img/img_personnages/Monstre/Monstrespritesheet.png");
+  background-size: 4800% 100%;
+  z-index: 1;
   width: 30vw;
   aspect-ratio: 13 / 12;
-  animation-name: test;
+  position: absolute;
+  right: 10vw;
+  bottom: 50px;
+  animation-name: moving;
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-timing-function: steps(48);
   animation-play-state: paused;
-  position: absolute;
-  right: 10vw;
-  bottom: 0;
 }
 
-.Julia {
-  object-fit: cover;
-  object-position: 0 0;
-  width: 30vw;
+.is-scrolling #monstre {
+  animation-play-state: running;
+}
+
+@keyframes moving {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -4800% 0;
+  }
+}
+/* Animations Julia*/
+#Julia {
+  background-image: url("../assets/img/img_personnages/Juliaspritesheet.png");
+  background-size: 4900% 100%;
+  width: 21.5vw;
+  z-index: 1;
   aspect-ratio: 13 / 12;
   filter: grayscale(100%);
+  animation-name: Walking;
+  animation-duration: 1.5s;
+  animation-play-state: running;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(48);
+}
+
+@keyframes Walkling {
+  from {
+    object-position: 0 0;
+  }
+  to {
+    object-position: -4800% 0;
+  }
+}
+
+.is-scrolling #Julia {
+  animation-play-state: running;
 }
 
 .eyes {
@@ -226,33 +260,33 @@ input[type="checkbox"]::after {
   top: 50%;
 }
 
-.house {
-  object-fit: cover;
-  object-position: 0 0;
+#house {
+  background-image: url("../assets/img/img_element_visuels/Haunted_house_spritesheet.png");
+  background-size: 700% 100%;
   width: 35%;
   aspect-ratio: 22 / 12;
   position: absolute;
   left: 30vw;
   top: 10vw;
-  filter: grayscale(100%);
-}
-
-#SpriteSheet {
-  border: solid red 3px;
-}
-
-.is-scrolling .monster {
+  filter: grayscale(75%);
+  animation-name: flashing;
+  animation-duration: 0.8s;
   animation-play-state: running;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(7);
 }
 
-@keyframes test {
+@keyframes flashing {
   from {
     background-position: 0 0;
   }
-
   to {
-    background-position: -56160px 0;
+    background-position: -700% 0;
   }
+}
+
+.SpriteSheet {
+  border: solid red 3px;
 }
 
 img {

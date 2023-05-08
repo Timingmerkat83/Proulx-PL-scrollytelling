@@ -51,17 +51,17 @@ gsap.to(".leaf", {
 });
 
 /* Animation chapitre 2 */
-gsap.timeline().to(".no2", {
+let chapter02 = gsap.timeline().to(".no2", {
   scrollTrigger: {
     trigger: ".no2",
     pin: true,
     scrub: 0.5,
-    end: "+=100%",
+    end: "+=200%",
     markers: true,
   },
 });
 /* Animation chapitre 3 */
-gsap.timeline().to(".no3", {
+let chapter03 = gsap.timeline().to(".no3", {
   scrollTrigger: {
     trigger: ".no3",
     pin: true,
@@ -72,7 +72,7 @@ gsap.timeline().to(".no3", {
   },
 });
 /* Animation chapitre 4 */
-gsap.timeline().to(".no4", {
+let chapter04 = gsap.timeline().to(".no4", {
   scrollTrigger: {
     trigger: ".no4",
     pin: true,
@@ -83,7 +83,7 @@ gsap.timeline().to(".no4", {
   },
 });
 /* Animation chapitre 5 */
-gsap.timeline().to(".no5", {
+let chapter05 = gsap.timeline().to(".no5", {
   scrollTrigger: {
     trigger: ".no5",
     pin: true,
@@ -94,7 +94,7 @@ gsap.timeline().to(".no5", {
   },
 });
 /* Animation chapitre 6 */
-gsap.timeline().to(".no6", {
+let chapter06 = gsap.timeline().to(".no6", {
   scrollTrigger: {
     trigger: ".no6",
     pin: true,
