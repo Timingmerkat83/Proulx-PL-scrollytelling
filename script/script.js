@@ -25,52 +25,139 @@ const Scroll = document.querySelector(".mouse");
 const chapterTextArr = document.querySelectorAll(".chapterText");
 
 /* Animation chapitre 1 */
-let chapter01 = gsap.timeline().to(".no1", {
-  scrollTrigger: {
-    trigger: ".no1",
-    pin: true,
-    scrub: true,
-    start: "top top",
-    end: "+=200%",
-    markers: true,
-  },
-});
+let chapter01 = gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: ".no1",
+      pin: true,
+      scrub: true,
+      start: "top top",
+      end: "100% top",
+      markers: true,
+    },
+  })
+  .to("#Marie", {
+    transformOrigin: "0 0",
+    motionPath: {
+      path: [
+        { x: 100, y: 0 },
+        { x: 20, y: -100 },
+      ],
+    },
+    duration: "5",
+    scale: "0.300",
+    x: "-40",
+    y: "-200",
+  })
+  .to(
+    "#Julia",
+    {
+      transformOrigin: "0 0",
+      motionPath: {
+        path: [
+          { x: 100, y: 0 },
+          { x: 20, y: -100 },
+        ],
+      },
+      duration: "5",
+      scale: "0.300",
+    },
+    "<"
+  );
 
-gsap.to(".leaf", {
-  transformOrigin: "0 0",
-  motionPath: {
-    path: [
-      { x: 125, y: 150 },
-      { x: 1000, y: 100 },
-      { x: 2000, y: 150 },
-    ],
-  },
-  duration: 3,
-  rotation: "360",
-  repeat: -1,
-});
+let leafAnim = gsap
+  .timeline()
+  .to(".leaf.no1", {
+    transformOrigin: "0 0",
+    motionPath: {
+      path: [
+        { x: 125, y: -400 },
+        { x: 1000, y: -200 },
+        { x: 2000, y: -450 },
+      ],
+    },
+    duration: 3,
+    rotation: "360",
+    repeat: -1,
+  })
+  .to(
+    ".leaf.no2",
+    {
+      transformOrigin: "0 0",
+      motionPath: {
+        path: [
+          { x: 125, y: 150 },
+          { x: 1000, y: 100 },
+          { x: 2000, y: 150 },
+        ],
+      },
+      duration: 4,
+      rotation: "680",
+      repeat: -1,
+    },
+    "-=0.3"
+  )
+  .to(
+    ".leaf.no3",
+    {
+      transformOrigin: "0 0",
+      motionPath: {
+        path: [
+          { x: 0, y: 500 },
+          { x: 1000, y: 100 },
+          { x: 2000, y: 500 },
+        ],
+      },
+      duration: 3,
+      rotation: "680",
+      repeat: -1,
+    },
+    "-=0.1"
+  )
+  .to(".leaf.no4", {
+    transformOrigin: "0 0",
+    motionPath: {
+      path: [
+        { x: 0, y: 500 },
+        { x: 1000, y: 100 },
+        { x: 2000, y: 500 },
+      ],
+    },
+    duration: 6,
+    rotation: "1080",
+    repeat: -1,
+  });
 
 /* Animation chapitre 2 */
-let chapter02 = gsap.timeline().to(".no2", {
+let chapter02 = gsap.timeline({
   scrollTrigger: {
     trigger: ".no2",
     pin: true,
-    scrub: 0.5,
-    end: "+=200%",
+    scrub: true,
+    start: "top top",
+    end: "50% top",
     markers: true,
   },
 });
 /* Animation chapitre 3 */
-let chapter03 = gsap.timeline().to(".no3", {
-  scrollTrigger: {
-    trigger: ".no3",
-    pin: true,
-    scrub: 0.5,
-    start: "top top",
-    end: "+=100%",
-    markers: true,
-  },
-});
+let chapter03 = gsap
+  .timeline()
+  .to(".no3", {
+    scrollTrigger: {
+      trigger: ".no3",
+      pin: true,
+      scrub: true,
+      start: "top top",
+      end: "50% top",
+      markers: true,
+    },
+  })
+  .to(".doorshadow", {
+    rotation: "0",
+  })
+  .from(".doorshadow", {
+    rotation: "180",
+  });
 /* Animation chapitre 4 */
 let chapter04 = gsap.timeline().to(".no4", {
   scrollTrigger: {
@@ -78,7 +165,7 @@ let chapter04 = gsap.timeline().to(".no4", {
     pin: true,
     scrub: 0.5,
     start: "top top",
-    end: "+=100%",
+    end: "50% top",
     markers: true,
   },
 });

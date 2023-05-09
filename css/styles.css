@@ -187,6 +187,14 @@ input[type="checkbox"]::after {
   color: red;
 }
 
+.doorshadow {
+  opacity: 75%;
+  border: solid red;
+  position: absolute;
+  right: 0;
+  width: 85vw;
+}
+
 /* Animations Monstre*/
 #monstre {
   background-image: url("../assets/img/img_personnages/Monstre/Monstrespritesheet.png");
@@ -217,27 +225,62 @@ input[type="checkbox"]::after {
     background-position: -4800% 0;
   }
 }
-/* Animations Julia*/
-#Julia {
-  background-image: url("../assets/img/img_personnages/Juliaspritesheet.png");
-  background-size: 4900% 100%;
+
+/* Animations Marie*/
+
+#Marie {
+  background-image: url("../assets/img/img_personnages/Mariespritesheet.png");
+  background-size: 2700% 100%;
+  position: absolute;
+  bottom: 0;
+  left: 45vw;
   width: 21.5vw;
   z-index: 1;
   aspect-ratio: 13 / 12;
   filter: grayscale(100%);
-  animation-name: Walking;
+  animation-name: MarieWalking;
   animation-duration: 1.5s;
+  animation-play-state: paused;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(27);
+}
+
+@keyframes MarieWalking {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -2700% 0;
+  }
+}
+
+.is-scrolling #Marie {
   animation-play-state: running;
+}
+/* Animations Julia*/
+#Julia {
+  background-image: url("../assets/img/img_personnages/Juliaspritesheet.png");
+  background-size: 4800% 100%;
+  position: absolute;
+  bottom: 0;
+  left: 40vw;
+  width: 21.5vw;
+  z-index: 1;
+  aspect-ratio: 13 / 12;
+  filter: grayscale(100%);
+  animation-name: JuliaWalking;
+  animation-duration: 1s;
+  animation-play-state: paused;
   animation-iteration-count: infinite;
   animation-timing-function: steps(48);
 }
 
-@keyframes Walkling {
+@keyframes JuliaWalking {
   from {
-    object-position: 0 0;
+    background-position: 0 0;
   }
   to {
-    object-position: -4800% 0;
+    background-position: -4800% 0;
   }
 }
 
@@ -258,6 +301,7 @@ input[type="checkbox"]::after {
 .leaf {
   position: absolute;
   top: 50%;
+  z-index: 1;
 }
 
 #house {
