@@ -1,5 +1,6 @@
 :root {
   --blood: rgb(138, 5, 5);
+  --primary: ;
 }
 
 @font-face {
@@ -18,11 +19,11 @@ body {
 }
 
 /* Styles du Header*/
-h1 {
+h1.title {
   font-family: HelpMe;
   text-align: center;
   color: var(--blood);
-  text-shadow: 3px 2px 2px black;
+  text-shadow: 3px 2px 0.5rem black;
   font-size: 6vw;
 }
 
@@ -31,8 +32,14 @@ h2 {
   color: var(--blood);
 }
 
+p {
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
 .glow {
-  text-shadow: 0 0 5px red;
+  text-shadow: 0 0 5px var(--primary);
   position: absolute;
   bottom: 8em;
 }
@@ -93,7 +100,7 @@ section:first-of-type {
 }
 
 /* Styles chapitre 2*/
-section:nth-child(2) {
+section#Ch02 {
   background-image: url("../assets/img/img_background/dion_proulx_scene_02_582-424.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -101,7 +108,7 @@ section:nth-child(2) {
 }
 
 /* Styles chapitre 3*/
-section:nth-child(3) {
+section#Ch03 {
   background-image: url("../assets/img/img_background/dion_proulx_scene_03_582-424.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -109,21 +116,21 @@ section:nth-child(3) {
 }
 
 /* Styles chapitre 4*/
-section:nth-child(4) {
+section#Ch04 {
   background-image: url("../assets/img/img_background/dion_proulx_scene_04_582-424.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 /* Styles chapitre 5*/
-section:nth-child(5) {
+section#Ch05 {
   background-image: url("../assets/img/img_background/dion_proulx_scene_05_582-424.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 /* Styles chapitre 6*/
-section:nth-child(6) {
+section#Ch06 {
   background-image: url("../assets/img/img_background/dion_proulx_scene_06_582-424.jpg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -187,46 +194,39 @@ input[type="checkbox"]::after {
   color: red;
 }
 
-.doorshadow {
-  opacity: 75%;
-  border: solid red;
-  position: absolute;
-  right: 0;
-  width: 85vw;
-}
+/* Animation Chapitre 1 */
 
-/* Animations Monstre*/
-#monstre {
-  background-image: url("../assets/img/img_personnages/Monstre/Monstrespritesheet.png");
-  background-size: 4800% 100%;
+/* Animations Marie*/
+.leaf {
+  position: absolute;
+  top: 50%;
   z-index: 1;
-  width: 30vw;
-  aspect-ratio: 13 / 12;
+}
+
+#house {
+  background-image: url("../assets/img/img_element_visuels/Haunted_house_spritesheet.png");
+  background-size: 700% 100%;
+  width: 35%;
+  aspect-ratio: 22 / 12;
   position: absolute;
-  right: 10vw;
-  bottom: 50px;
-  animation-name: moving;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: steps(48);
-  animation-play-state: paused;
-}
-
-.is-scrolling #monstre {
+  left: 30vw;
+  top: 10vw;
+  filter: grayscale(75%);
+  animation-name: flashing;
+  animation-duration: 0.8s;
   animation-play-state: running;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(7);
 }
 
-@keyframes moving {
+@keyframes flashing {
   from {
     background-position: 0 0;
   }
-
   to {
-    background-position: -4800% 0;
+    background-position: -700% 0;
   }
 }
-
-/* Animations Marie*/
 
 #Marie {
   background-image: url("../assets/img/img_personnages/Mariespritesheet.png");
@@ -288,44 +288,68 @@ input[type="checkbox"]::after {
   animation-play-state: running;
 }
 
+/* Animation Chapitre 3*/
+
 .eyes {
-  object-fit: cover;
-  object-position: 0 0;
-  width: 20vw;
+  background-image: url("../assets/img/img_personnages/Monstre/monsters_eyes.png");
+  background-size: 2500% 100%;
+  background-position: 0 0;
+  width: 20%;
   aspect-ratio: 13 / 8;
   position: absolute;
   top: 20vh;
   left: 20vh;
-}
-
-.leaf {
-  position: absolute;
-  top: 50%;
-  z-index: 1;
-}
-
-#house {
-  background-image: url("../assets/img/img_element_visuels/Haunted_house_spritesheet.png");
-  background-size: 700% 100%;
-  width: 35%;
-  aspect-ratio: 22 / 12;
-  position: absolute;
-  left: 30vw;
-  top: 10vw;
-  filter: grayscale(75%);
-  animation-name: flashing;
-  animation-duration: 0.8s;
+  animation-name: openingEyes;
+  animation-duration: 2s;
   animation-play-state: running;
-  animation-iteration-count: infinite;
-  animation-timing-function: steps(7);
+  animation-timing-function: steps(24);
 }
 
-@keyframes flashing {
+@keyframes openingEyes {
   from {
     background-position: 0 0;
   }
   to {
-    background-position: -700% 0;
+    background-position: 46080px 0;
+  }
+}
+.doorshadow {
+  opacity: 75%;
+  border: solid red;
+  position: absolute;
+  right: 0;
+  width: 85vw;
+}
+
+/* Animation Chapitre 4*/
+/* Animations Monstre*/
+#monstre {
+  background-image: url("../assets/img/img_personnages/Monstre/Monstrespritesheet.png");
+  background-size: 4800% 100%;
+  z-index: 1;
+  width: 30vw;
+  aspect-ratio: 13 / 12;
+  position: absolute;
+  right: 10vw;
+  bottom: 50px;
+  animation-name: moving;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(48);
+  animation-play-state: paused;
+}
+
+.is-scrolling #monstre {
+  animation-play-state: running;
+}
+
+@keyframes moving {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -4800% 0;
   }
 }
 

@@ -23,12 +23,18 @@ gsap.registerPlugin(ScrollTrigger);
 const Scroll = document.querySelector(".mouse");
 
 const chapterTextArr = document.querySelectorAll(".chapterText");
+let chapter01 = document.querySelector("#Ch01");
+let chapter02 = document.querySelector("#Ch02");
+let chapter03 = document.querySelector("#Ch03");
+let chapter04 = document.querySelector("#Ch04");
+let chapter05 = document.querySelector("#Ch05");
+let chapter06 = document.querySelector("#Ch06");
 
 /* Animation chapitre 1 */
-let chapter01 = gsap
+gsap
   .timeline({
     scrollTrigger: {
-      trigger: ".no1",
+      trigger: "#Ch01",
       pin: true,
       scrub: true,
       start: "top top",
@@ -129,22 +135,21 @@ let leafAnim = gsap
   });
 
 /* Animation chapitre 2 */
-let chapter02 = gsap.timeline({
+gsap.timeline({
   scrollTrigger: {
-    trigger: ".no2",
+    trigger: "#Ch02",
     pin: true,
     scrub: true,
     start: "top top",
-    end: "50% top",
+    end: "200% top",
     markers: true,
   },
 });
 /* Animation chapitre 3 */
-let chapter03 = gsap
-  .timeline()
-  .to(".no3", {
+gsap
+  .timeline({
     scrollTrigger: {
-      trigger: ".no3",
+      trigger: "#Ch03",
       pin: true,
       scrub: true,
       start: "top top",
@@ -159,9 +164,9 @@ let chapter03 = gsap
     rotation: "180",
   });
 /* Animation chapitre 4 */
-let chapter04 = gsap.timeline().to(".no4", {
+gsap.timeline({
   scrollTrigger: {
-    trigger: ".no4",
+    trigger: "#Ch04",
     pin: true,
     scrub: 0.5,
     start: "top top",
@@ -170,9 +175,9 @@ let chapter04 = gsap.timeline().to(".no4", {
   },
 });
 /* Animation chapitre 5 */
-let chapter05 = gsap.timeline().to(".no5", {
+gsap.timeline({
   scrollTrigger: {
-    trigger: ".no5",
+    trigger: "#Ch05",
     pin: true,
     scrub: 0.5,
     start: "top top",
@@ -181,9 +186,9 @@ let chapter05 = gsap.timeline().to(".no5", {
   },
 });
 /* Animation chapitre 6 */
-let chapter06 = gsap.timeline().to(".no6", {
+gsap.timeline({
   scrollTrigger: {
-    trigger: ".no6",
+    trigger: "chapter06",
     pin: true,
     scrub: 0.5,
     start: "top top",
