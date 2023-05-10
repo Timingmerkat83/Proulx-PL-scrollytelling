@@ -1,5 +1,6 @@
 console.clear();
-
+gsap.registerPlugin(MotionPathPlugin);
+gsap.registerPlugin(ScrollTrigger);
 const body = document.querySelector("body");
 
 window.addEventListener("scroll", (event) => {
@@ -17,9 +18,6 @@ window.addEventListener("scroll", (event) => {
 //   morphSVG: "#exclamation"
 // });
 
-gsap.registerPlugin(MotionPathPlugin);
-
-gsap.registerPlugin(ScrollTrigger);
 const Scroll = document.querySelector(".mouse");
 
 const chapterTextArr = document.querySelectorAll(".chapterText");
@@ -157,11 +155,14 @@ gsap
       markers: true,
     },
   })
-  .to(".doorshadow", {
-    rotation: "0",
-  })
   .from(".doorshadow", {
-    rotation: "180",
+    rotation: "0",
+    x: 0,
+  })
+  .to(".doorshadow", {
+    duration: "2",
+    rotation: "80",
+    x: 1000,
   });
 /* Animation chapitre 4 */
 gsap.timeline({
