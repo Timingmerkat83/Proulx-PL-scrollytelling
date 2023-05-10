@@ -1,6 +1,6 @@
 :root {
   --blood: rgb(138, 5, 5);
-  --primary: ;
+  --primary: red;
 }
 
 @font-face {
@@ -11,6 +11,9 @@
 @font-face {
   font-family: ScaryFont;
   src: url("../assets/police/HelpMe.ttf") format(TrueType);
+}
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -87,6 +90,8 @@ section {
   height: 100vh;
   position: relative;
   margin: 0;
+  border: solid 1px red;
+  overflow: hidden;
 }
 
 /* Styles chapitre 1*/
@@ -126,7 +131,7 @@ section#Ch05 {
 /* Styles chapitre 6*/
 section#Ch06 {
   background-image: url("../assets/img/img_background/dion_proulx_scene_06_582-424.jpg");
-  background-size: contain;
+  background-size: 100vw 100vh;
   background-repeat: no-repeat;
 }
 
@@ -233,7 +238,7 @@ input[type="checkbox"]::after {
   aspect-ratio: 13 / 12;
   filter: grayscale(100%);
   animation-name: MarieWalking;
-  animation-duration: 1.5s;
+  animation-duration: 2s;
   animation-play-state: paused;
   animation-iteration-count: infinite;
   animation-timing-function: steps(27);
@@ -286,16 +291,15 @@ input[type="checkbox"]::after {
 
 #eyes {
   background-image: url("../assets/img/img_personnages/Monstre/monster_eyes_spriteSheet.png");
-  background-size: 2500% 100%;
+  background-size: 2400% 100%;
   width: 30vw;
-  height: 20vh;
+  height: 25vh;
   position: absolute;
   top: 20vh;
   left: 20vh;
   animation-name: openingEyes;
   animation-duration: 2s;
-  animation-play-state: running;
-  animation-iteration-count: infinite;
+  animation-play-state: paused;
   animation-timing-function: steps(24);
   border: solid red;
 }
@@ -305,11 +309,11 @@ input[type="checkbox"]::after {
     background-position: 0 0;
   }
   100% {
-    background-position: -2500% 0;
+    background-position: -2400% 0;
   }
 }
 
-.is-scrolling .eyes {
+.is-scrolling #eyes {
   animation-play-state: running;
 }
 
@@ -323,6 +327,75 @@ input[type="checkbox"]::after {
 }
 
 /* Animation Chapitre 4*/
+
+#JuliaCh04 {
+  background-image: url("../assets/img/img_personnages/Juliaspritesheet.png");
+  background-size: 4800% 100%;
+  position: absolute;
+  top: 25%;
+  left: 0;
+  width: 60vw;
+  z-index: 1;
+  aspect-ratio: 1 / 1;
+  filter: grayscale(100%);
+  animation-name: JuliaWalkingIn;
+  animation-duration: 1s;
+  animation-play-state: paused;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(48);
+}
+
+@keyframes JuliaWalkingIn {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -4800% 0;
+  }
+}
+
+.is-scrolling #JuliaCh04 {
+  animation-play-state: running;
+}
+
+#exclamation {
+  width: 3vw;
+}
+
+#JuliaFace {
+  width: 75vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: -200px;
+  filter: grayscale(90%);
+  aspect-ratio: 13 / 12;
+  background-image: url("../assets/img/img_personnages/Julia/Face/juliaFace_SpriteSheet.png");
+  background-size: 2400% 100%;
+  animation-name: JuliaFace;
+  animation-duration: 1.5s;
+  animation-play-state: paused;
+  animation-fill-mode: forwards;
+  animation-timing-function: steps(24);
+}
+@keyframes JuliaFace {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -2400% 0;
+  }
+}
+
+.is-scrolling #JuliaFace {
+  animation-play-state: running;
+}
+
+.morphing {
+  width: 10vw;
+  position: absolute;
+  left: 25em;
+}
 /* Animations Monstre*/
 #monstre {
   background-image: url("../assets/img/img_personnages/Monstre/Monstrespritesheet.png");
@@ -367,23 +440,13 @@ img {
   height: 500px;
   aspect-ratio: 13 / 12;
   margin: 0 auto;
-  border: 1px solid white;
+  border: 1px solid rgb(228, 27, 27);
   position: absolute;
-  top: 50%;
-  left: 50%;
-  background-image: url("../assets/img/img_personnages/Monstre/monster_eyes_spriteSheet.png");
-  background-size: 4000% 0;
-  animation-name: moveEyes;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
+  top: 25%;
+  background-image: url("../assets/img/img_personnages/Julia/Face/juliaFace_SpriteSheet.png");
+  background-size: 2400% 100%;
+  animation-name: JuliaFace;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
   animation-timing-function: steps(24);
-}
-
-@keyframes moveEyes {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: -4000% 0;
-  }
 }

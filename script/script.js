@@ -13,7 +13,7 @@ window.addEventListener("scroll", (event) => {
 
 // gsap.registerPlugin(MorphSVGPlugin);
 // /* Animation du morphing*/
-// let questionMark = document.querySelector("#QuestionMark");
+let questionMark = document.querySelector("#QuestionMark");
 // let anim = gsap.to(questionMark, {
 //   morphSVG: "#exclamation"
 // });
@@ -151,30 +151,54 @@ gsap
       pin: true,
       scrub: true,
       start: "top top",
-      end: "50% top",
+      end: "100% top",
       markers: true,
     },
   })
   .from(".doorshadow", {
     rotation: "0",
     x: 0,
+    y: 0,
   })
   .to(".doorshadow", {
     duration: "2",
     rotation: "80",
     x: 1000,
+    y: 250,
+  })
+  .from("#eyes", {
+    opacity: 0,
+  })
+  .to("#eyes", {
+    opacity: 1,
   });
 /* Animation chapitre 4 */
-gsap.timeline({
-  scrollTrigger: {
-    trigger: "#Ch04",
-    pin: true,
-    scrub: 0.5,
-    start: "top top",
-    end: "50% top",
-    markers: true,
-  },
-});
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: "#Ch04",
+      pin: true,
+      scrub: 0.5,
+      start: "top top",
+      end: "200% top",
+      markers: true,
+    },
+  })
+  .from("#JuliaCh04", {
+    x: -1000,
+  })
+  // })
+  .to("#JuliaCh04", {
+    opacity: 0,
+    duration: "0.5",
+  })
+  .from("#JuliaFace", {
+    x: -1000,
+  })
+  .to("#JuliaFace", {
+    x: 0,
+  });
+
 /* Animation chapitre 5 */
 gsap.timeline({
   scrollTrigger: {
@@ -206,7 +230,6 @@ gsap.to(".mouse", {
   y: "110px",
   rotation: "180",
   stagger: "0.1",
-  yoyo: true,
   repeat: "-1",
 });
 
