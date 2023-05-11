@@ -7,7 +7,10 @@
 
 gsap.registerPlugin(DrawSVGPlugin);
 
-gsap.set("#path0");
+TweenLite.to("#path", 1, {
+  drawSVG: "40% 60%",
+  delay: 0.5,
+});
 document.addEventListener("click", function () {
   console.log("reset");
   anim.progress(0).pause();
