@@ -1,6 +1,7 @@
 console.clear();
 gsap.registerPlugin(MotionPathPlugin);
 gsap.registerPlugin(ScrollTrigger);
+
 const body = document.querySelector("body");
 
 window.addEventListener("scroll", (event) => {
@@ -252,7 +253,15 @@ gsap
   .from("#JuliaCh04", {
     x: -1000,
   })
-  // })
+  .from("#QuestionMark", {
+    opacity: 0,
+  })
+  .to("#QuestionMark", {
+    opacity: 1,
+  })
+  .to("#QuestionMark", {
+    morphSVG: "#ExclamationPoint",
+  })
   .to("#JuliaCh04", {
     opacity: 0,
     duration: "2",

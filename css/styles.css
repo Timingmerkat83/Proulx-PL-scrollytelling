@@ -387,8 +387,8 @@ input[type="checkbox"]::after {
 svg {
   display: block;
 }
-#exclamation {
-  width: 3vw;
+#ExclamationPoint {
+  visibility: hidden;
 }
 
 #JuliaFace {
