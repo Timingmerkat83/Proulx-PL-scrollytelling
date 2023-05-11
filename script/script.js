@@ -260,6 +260,7 @@ gsap
     opacity: 1,
   })
   .to("#QuestionMark", {
+    duration: 10,
     morphSVG: "#ExclamationPoint",
   })
   .to("#JuliaCh04", {
@@ -272,6 +273,16 @@ gsap
   .from("#JuliaFace", {
     x: -1000,
   })
+  .to("#QuestionMark", {
+    opacity: 0,
+  })
+  .to(
+    ".chapterText",
+    {
+      opacity: 0,
+    },
+    ">"
+  )
   .to("#JuliaFace", {
     x: 200,
   })
@@ -330,9 +341,6 @@ gsap
     },
     ">"
   )
-  .to(".Jumpscare", {
-    opacity: 0,
-  })
   .to(
     "#Ch04",
     {
@@ -340,7 +348,14 @@ gsap
       scale: 1.2,
       x: 0,
     },
-    "+=4"
+    "+=7"
+  )
+  .to(
+    ".Jumpscare",
+    {
+      opacity: 0,
+    },
+    "<"
   );
 
 /* Animation chapitre 5 */
