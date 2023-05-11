@@ -12,6 +12,14 @@
   font-family: ScaryFont;
   src: url("../assets/police/HelpMe.ttf") format(TrueType);
 }
+
+/* Typographie avec accent pour les dialogues des chapitres */
+@font-face {
+  font-family: ScaryDialog;
+  src: url("../assets/police/viktors_littl_creepy_horror/Viktors\ Littl\ Creepy\ Horror.otf")
+    format("opentype");
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -36,9 +44,12 @@ h2 {
 }
 
 div.chapterText {
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-family: ScaryDialog;
 }
 
 .glow {
@@ -285,6 +296,15 @@ input[type="checkbox"]::after {
 
 .is-scrolling #Julia {
   animation-play-state: running;
+}
+
+/* Animation Chapitre 2*/
+
+.Arm {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  filter: grayscale(90%);
 }
 
 /* Animation Chapitre 3*/

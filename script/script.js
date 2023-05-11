@@ -133,16 +133,48 @@ let leafAnim = gsap
   });
 
 /* Animation chapitre 2 */
-gsap.timeline({
-  scrollTrigger: {
-    trigger: "#Ch02",
-    pin: true,
-    scrub: true,
-    start: "top top",
-    end: "200% top",
-    markers: true,
-  },
-});
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: "#Ch02",
+      pin: true,
+      scrub: true,
+      start: "top top",
+      end: "200% top",
+      markers: true,
+    },
+  })
+  .to(
+    "#Ch02",
+    {
+      scale: 1.5,
+    },
+    1
+  )
+  .from(".Arm", {
+    y: 1000,
+    rotate: 80,
+  })
+  .to(".Arm", {
+    y: -100,
+    rotate: 50,
+  })
+  .to(
+    ".Arm",
+    {
+      skewY: "-20deg",
+    },
+    3
+  )
+  .to(".Arm", {
+    skewY: "0deg",
+  })
+  .to(".Arm", {
+    skewY: "-20deg",
+  })
+  .to(".Arm", {
+    skewY: "0deg",
+  });
 /* Animation chapitre 3 */
 gsap
   .timeline({
