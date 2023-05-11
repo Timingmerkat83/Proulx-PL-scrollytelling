@@ -71,6 +71,7 @@ gsap
           { x: 20, y: -100 },
         ],
       },
+      delay: 2,
       duration: "10",
       scale: "0.300",
     },
@@ -143,6 +144,7 @@ let leafAnim = gsap
 /* Animation chapitre 2 */
 gsap
   .timeline({
+    x: "100%",
     scrollTrigger: {
       trigger: "#Ch02",
       pin: true,
@@ -182,16 +184,10 @@ gsap
     ease: "none",
   })
   .to(".Arm", {
+    duration: "3",
     skewY: "0deg",
     ease: "none",
-  })
-  .to(".Arm", {
-    skewY: "-20deg",
-    ease: "none",
-  })
-  .to(".Arm", {
-    skewY: "0deg",
-    ease: "none",
+    repeat: 1,
   });
 /* Animation chapitre 3 */
 gsap
@@ -255,6 +251,7 @@ gsap
     opacity: 1,
   })
   .from("#JuliaCh04", {
+    duration: 5,
     x: -1000,
   })
   .from("#QuestionMark", {

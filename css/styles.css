@@ -250,7 +250,6 @@ input[type="checkbox"]::after {
   bottom: 0;
   left: 45vw;
   width: 21.5vw;
-  z-index: 1;
   aspect-ratio: 13 / 12;
   filter: grayscale(100%);
   animation-name: MarieWalking;
