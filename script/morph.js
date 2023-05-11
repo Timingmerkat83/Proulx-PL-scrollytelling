@@ -5,11 +5,9 @@
 //  morphSVG: "#ExclamationPoint",
 //});
 
-gsap.registerPlugin(MorphSVGPlugin);
-let anim = gsap.to("#circle", {
-  morphSVG: "#hippo",
-});
+gsap.registerPlugin(DrawSVGPlugin);
 
+gsap.set("#path0");
 document.addEventListener("click", function () {
   console.log("reset");
   anim.progress(0).pause();
