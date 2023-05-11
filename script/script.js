@@ -1,6 +1,5 @@
 console.clear();
-gsap.registerPlugin(MotionPathPlugin);
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
 const body = document.querySelector("body");
 
