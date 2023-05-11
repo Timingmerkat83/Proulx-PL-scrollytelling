@@ -207,16 +207,20 @@ gsap
   })
 
   .from(".doorshadow", {
+    duration: 1,
     rotation: "0",
     x: 0,
     y: 0,
   })
-  .to(".doorshadow", {
-    duration: "2",
-    rotation: "80",
-    x: 1000,
-    y: 250,
-  })
+  .to(
+    ".doorshadow",
+    {
+      rotation: "20",
+      x: 1000,
+      y: -1000,
+    },
+    3
+  )
   .from(".chapterText", {
     duration: 1,
     opacity: 0,
@@ -274,7 +278,74 @@ gsap
   })
   .to("#JuliaFace", {
     x: 200,
-  });
+  })
+  .to(
+    "#Ch04",
+    {
+      duration: 5,
+      scale: 3,
+      x: -1000,
+    },
+    "+=2"
+  )
+  //Light Flashings
+  .to(
+    "#Ch04",
+    {
+      opacity: 0.05,
+      ease: "none",
+    },
+    "-=2"
+  )
+  .to("#Ch04", {
+    opacity: 1,
+    ease: "none",
+  })
+  .to("#Ch04", {
+    opacity: 0.05,
+    ease: "none",
+  })
+  .to("#Ch04", {
+    opacity: 1,
+    ease: "none",
+  })
+  .to("#Ch04", {
+    opacity: 0.05,
+    ease: "none",
+  })
+  .from(".Jumpscare", {
+    opacity: 0,
+  })
+  .from("#monstre", {
+    y: 1000,
+    scaleX: 1,
+  })
+  .to("#monstre", {
+    scaleX: -1,
+  })
+  .to("#Ch04", {
+    opacity: 1,
+    ease: "none",
+  })
+  .to(
+    "#JuliaFace",
+    {
+      opacity: 0,
+    },
+    ">"
+  )
+  .to(".Jumpscare", {
+    opacity: 0,
+  })
+  .to(
+    "#Ch04",
+    {
+      duration: 5,
+      scale: 1.2,
+      x: 0,
+    },
+    "+=4"
+  );
 
 /* Animation chapitre 5 */
 gsap
