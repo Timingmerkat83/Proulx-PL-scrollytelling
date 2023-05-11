@@ -400,7 +400,7 @@ input[type="checkbox"]::after {
   animation-name: JuliaFace;
   animation-duration: 1.5s;
   animation-play-state: paused;
-  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
   animation-timing-function: steps(24);
 }
 @keyframes JuliaFace {
@@ -453,11 +453,11 @@ input[type="checkbox"]::after {
 }
 
 .SpriteSheet {
-  border: solid red 3px;
+  border: none;
 }
 
 img {
-  border-color: red 4px;
+  border-color: none;
 }
 
 .container {
