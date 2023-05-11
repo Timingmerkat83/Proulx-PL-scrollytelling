@@ -466,6 +466,22 @@ svg {
   }
 }
 
+.MonsterArm {
+  position: absolute;
+  left: 50vw;
+}
+
+.blood {
+  position: absolute;
+  bottom: -300px;
+}
+.blood02 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .SpriteSheet {
   border: none;
 }

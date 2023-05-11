@@ -356,6 +356,65 @@ gsap
       opacity: 0,
     },
     "<"
+  )
+  .to("#monstre", {
+    opacity: 0,
+  })
+  .from(".MonsterArm", {
+    opacity: 0,
+    y: 1000,
+  })
+  .to(
+    ".MonsterArm",
+    {
+      y: -100,
+      scale: 2,
+    },
+    2
+  )
+  .to(".MonsterArm", {
+    duration: "4",
+    rotation: "-150deg",
+    x: -500,
+    y: 500,
+  })
+  .to(
+    ".blood",
+    {
+      transformOrigin: "0 0",
+      motionPath: {
+        path: [
+          { x: 0, y: 0 },
+          { x: 500, y: -500 },
+          { x: 1000, y: -25 },
+        ],
+      },
+      duration: "5",
+    },
+    "-=2"
+  )
+  .to(".MonsterArm", {
+    duration: "4",
+    rotation: "0deg",
+    x: 0,
+    y: 0,
+  })
+  .to(".MonsterArm", {
+    duration: "4",
+    rotation: "-150deg",
+    x: -500,
+    y: 500,
+  })
+  .from(".blood02", {
+    scale: 0,
+  })
+  .to(
+    ".blood02",
+    {
+      scale: 1,
+      duration: "2",
+    },
+    "-=1"
   );
 
 /* Animation chapitre 5 */
