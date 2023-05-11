@@ -55,7 +55,7 @@ gsap
         { x: 20, y: -100 },
       ],
     },
-    duration: "5",
+    duration: "10",
     scale: "0.300",
     x: "-40",
     y: "-200",
@@ -70,7 +70,7 @@ gsap
           { x: 20, y: -100 },
         ],
       },
-      duration: "5",
+      duration: "10",
       scale: "0.300",
     },
     "<"
@@ -152,7 +152,7 @@ gsap
     },
   })
   .from(".chapterText", {
-    duration: 1,
+    duration: 3,
     opacity: 0,
   })
   .to(".chapterText", {
@@ -162,8 +162,9 @@ gsap
     "#Ch02",
     {
       scale: 1.5,
+      duration: "4",
     },
-    4
+    2
   )
   .from(".Arm", {
     y: 1000,
@@ -173,15 +174,12 @@ gsap
     y: -100,
     rotate: 50,
     ease: "none",
+    duration: "3",
   })
-  .to(
-    ".Arm",
-    {
-      skewY: "-20deg",
-      ease: "none",
-    },
-    3
-  )
+  .to(".Arm", {
+    skewY: "-20deg",
+    ease: "none",
+  })
   .to(".Arm", {
     skewY: "0deg",
     ease: "none",

@@ -383,6 +383,10 @@ input[type="checkbox"]::after {
   animation-play-state: running;
 }
 
+/*style des fichiers SVG pour le Morphing*/
+svg {
+  display: block;
+}
 #exclamation {
   width: 3vw;
 }
