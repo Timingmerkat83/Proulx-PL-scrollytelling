@@ -26,6 +26,7 @@ html {
 
 body {
   margin: 0;
+  background-color: rgb(51, 50, 50);
   overflow-x: hidden;
 }
 
@@ -50,6 +51,10 @@ div.chapterText {
   text-decoration: none;
   font-size: 2rem;
   font-family: ScaryDialog;
+}
+
+div.chapterText.End {
+  position: absolute;
 }
 
 .glow {
@@ -384,7 +389,7 @@ input[type="checkbox"]::after {
 
 #JuliaFace {
   width: 75vw;
-  height: 100vh;
+  height: 90vh;
   position: absolute;
   top: 0;
   left: -200px;

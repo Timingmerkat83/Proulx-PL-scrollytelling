@@ -40,6 +40,13 @@ gsap
       markers: true,
     },
   })
+  .from(".chapterText", {
+    duration: 1,
+    opacity: 0,
+  })
+  .to(".chapterText", {
+    opacity: 1,
+  })
   .to("#Marie", {
     transformOrigin: "0 0",
     motionPath: {
@@ -144,12 +151,19 @@ gsap
       markers: true,
     },
   })
+  .from(".chapterText", {
+    duration: 1,
+    opacity: 0,
+  })
+  .to(".chapterText", {
+    opacity: 1,
+  })
   .to(
     "#Ch02",
     {
       scale: 1.5,
     },
-    1
+    4
   )
   .from(".Arm", {
     y: 1000,
@@ -158,22 +172,27 @@ gsap
   .to(".Arm", {
     y: -100,
     rotate: 50,
+    ease: "none",
   })
   .to(
     ".Arm",
     {
       skewY: "-20deg",
+      ease: "none",
     },
     3
   )
   .to(".Arm", {
     skewY: "0deg",
+    ease: "none",
   })
   .to(".Arm", {
     skewY: "-20deg",
+    ease: "none",
   })
   .to(".Arm", {
     skewY: "0deg",
+    ease: "none",
   });
 /* Animation chapitre 3 */
 gsap
@@ -187,6 +206,7 @@ gsap
       markers: true,
     },
   })
+
   .from(".doorshadow", {
     rotation: "0",
     x: 0,
@@ -197,6 +217,13 @@ gsap
     rotation: "80",
     x: 1000,
     y: 250,
+  })
+  .from(".chapterText", {
+    duration: 1,
+    opacity: 0,
+  })
+  .to(".chapterText", {
+    opacity: 1,
   })
   .from("#eyes", {
     opacity: 0,
@@ -214,7 +241,15 @@ gsap
       start: "top top",
       end: "200% top",
       markers: true,
+      ease: "none",
     },
+  })
+  .from(".chapterText", {
+    duration: 1,
+    opacity: 0,
+  })
+  .to(".chapterText", {
+    opacity: 1,
   })
   .from("#JuliaCh04", {
     x: -1000,
@@ -222,37 +257,56 @@ gsap
   // })
   .to("#JuliaCh04", {
     opacity: 0,
-    duration: "0.5",
+    duration: "2",
+  })
+  .to("#Ch04", {
+    scale: 1.5,
   })
   .from("#JuliaFace", {
     x: -1000,
   })
   .to("#JuliaFace", {
-    x: 0,
+    x: 200,
   });
 
 /* Animation chapitre 5 */
-gsap.timeline({
-  scrollTrigger: {
-    trigger: "#Ch05",
-    pin: true,
-    scrub: 0.5,
-    start: "top top",
-    end: "+=100%",
-    markers: true,
-  },
-});
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: "#Ch05",
+      pin: true,
+      scrub: 0.5,
+      start: "top top",
+      end: "+=100%",
+      markers: true,
+    },
+  })
+  .from(".chapterText", {
+    duration: 1,
+    opacity: 0,
+  })
+  .to(".chapterText", {
+    opacity: 1,
+  });
 /* Animation chapitre 6 */
-gsap.timeline({
-  scrollTrigger: {
-    trigger: "chapter06",
-    pin: true,
-    scrub: 0.5,
-    start: "top top",
-    end: "+=100%",
-    markers: true,
-  },
-});
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: "#Ch06",
+      pin: true,
+      scrub: 0.5,
+      start: "top top",
+      end: "+=100%",
+      markers: true,
+    },
+  })
+  .from(".chapterText", {
+    duration: 1,
+    opacity: 0,
+  })
+  .to(".chapterText", {
+    opacity: 1,
+  });
 /* Sélection du texte */
 
 /* Animation de l'icône scroll de l'intro*/
