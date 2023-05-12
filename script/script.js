@@ -1,5 +1,5 @@
 console.clear();
-gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
+gsap.registerPlugin(ScrollTrigger, MotionPathPlugin, MorphSVGPlugin );
 
 const body = document.querySelector("body");
 
@@ -258,11 +258,13 @@ gsap
     duration: 5,
     x: -1000,
   })
-  .to("#QuestionMark", {
+  .from("#QuestionMark", {
     opacity: 0,
   })
-  .to("#QuestionMark", {
+  .to("#QuestionMark",{
     opacity: 1,
+  })
+  .to("#QuestionMark", {
     duration: 10,
     morphSVG: "#ExclamationPoint",
   })
