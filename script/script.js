@@ -253,12 +253,16 @@ gsap
     duration: 5,
     x: -1000,
   })
-  .from("#QuestionMark", {
-    opacity: 0,
-  })
-  .to("#QuestionMark", {
-    opacity: 1,
-  })
+  .fromTo(
+    "#QuestionMark",
+    {
+      drawSVG: "0% 0%",
+    },
+    {
+      drawSVG: "0 100%",
+      duration: 2,
+    }
+  )
   .to("#QuestionMark", {
     duration: 10,
     morphSVG: "#ExclamationPoint",
@@ -420,12 +424,13 @@ gsap
 /* Animation chapitre 5 */
 gsap
   .timeline({
+    backgroundPosition: "50% 100%",
+    ease: "none",
     scrollTrigger: {
       trigger: "#Ch05",
-      pin: true,
-      scrub: 0.5,
-      start: "top top",
-      end: "+=100%",
+      start: "top bottom",
+      end: "bottom top",
+      scrub: true,
       markers: true,
     },
   })
@@ -437,6 +442,10 @@ gsap
     opacity: 1,
   });
 /* Animation chapitre 6 */
+gsap.set(".FloorBlood", {
+  skewY: "50deg",
+  rotate: -50,
+});
 gsap
   .timeline({
     scrollTrigger: {

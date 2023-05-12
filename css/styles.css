@@ -138,10 +138,13 @@ section#Ch04 {
   background-repeat: no-repeat;
 }
 /* Styles chapitre 5*/
+/* Section avec parallax*/
 section#Ch05 {
   background-image: url("../assets/img/img_background/dion_proulx_scene_05_582-424.jpg");
-  background-size: cover;
+  background-size: 100vw 200vh;
   background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: 50% 0%;
 }
 
 /* Styles chapitre 6*/
@@ -452,6 +455,10 @@ svg {
   animation-play-state: paused;
 }
 
+svg#morph {
+  position: absolute;
+  top: 25%;
+}
 .is-scrolling #monstre {
   animation-play-state: running;
 }
@@ -477,11 +484,19 @@ svg {
 }
 .blood02 {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 25%;
+  left: 25%;
 }
 
+/* Animation Chapitre 5 Styles */
+/* Animation Chapitre 6 Styles */
+
+.FloorBlood {
+  width: 20vw;
+  position: absolute;
+  top: 30vw;
+  left: 40vw;
+}
 .SpriteSheet {
   border: none;
 }
