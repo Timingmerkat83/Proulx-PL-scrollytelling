@@ -1,6 +1,6 @@
 # Rapport d'optimisation du projet ScrollyTelling
 
-- Résultat PageSpeedInsights: https://pagespeed.web.dev/analysis/https-timingmerkat83-github-io-Proulx-PL-scrollytelling/s2h9myvajm?form_factor=desktop
+- [Résultat PageSpeedInsights](https://pagespeed.web.dev/analysis/https-timingmerkat83-github-io-Proulx-PL-scrollytelling/s2h9myvajm?form_factor=desktop)
 
 ## Problème #1
 
