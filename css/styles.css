@@ -517,6 +517,36 @@ svg#morph {
 /* Animation Chapitre 5 Styles */
 /* Animation Chapitre 6 Styles */
 
+#monstreCh06 {
+  background-image: url("../assets/img/img_personnages/Monstre/Monstrespritesheet.png");
+  background-size: 4800% 100%;
+  z-index: 1;
+  width: 10vw;
+  aspect-ratio: 13 / 12;
+  position: absolute;
+  top: 18vh;
+  left: 58vw;
+  animation-name: idle;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(48);
+  animation-play-state: paused;
+}
+
+.is-scrolling #monstreCh06 {
+  animation-play-state: running;
+}
+
+@keyframes idle {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -4800% 0;
+  }
+}
+
 #MarieCh06 {
   position: absolute;
   bottom: 0;

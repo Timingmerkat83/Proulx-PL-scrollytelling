@@ -466,6 +466,12 @@ gsap
   })
   .to(".chapterText", {
     opacity: 1,
+  })
+  .from("#monstreCh06", {
+    opacity: 0,
+  })
+  .to("#monstreCh06", {
+    opacity: 1,
   });
 /* Sélection du texte */
 
