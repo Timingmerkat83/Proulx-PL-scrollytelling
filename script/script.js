@@ -39,7 +39,7 @@ gsap
       start: "top top",
       end: "100% top",
       toggleActions: "restart complete reset reverse",
-      markers: true,
+      markers: false,
     },
   })
   .from(".chapterText", {
@@ -153,7 +153,7 @@ gsap
       start: "top top",
       end: "200% top",
       toggleActions: "restart complete reset reverse",
-      markers: true,
+      markers: false,
     },
   })
   .from(".chapterText", {
@@ -201,7 +201,7 @@ gsap
       start: "top top",
       end: "100% top",
       toggleActions: "restart complete reset reverse",
-      markers: true,
+      markers: false,
     },
   })
 
@@ -242,7 +242,7 @@ gsap
       scrub: 0.5,
       start: "top top",
       end: "200% top",
-      markers: true,
+      markers: false,
       toggleActions: "restart complete reset reverse",
       ease: "none",
     },
@@ -430,7 +430,7 @@ gsap
       scrub: true,
       pin: true,
       toggleActions: "restart complete reset reverse",
-      markers: true,
+      markers: false,
     },
   })
   .from(".chapterText", {
@@ -454,7 +454,7 @@ gsap
       start: "top top",
       end: "+=100%",
       toggleActions: "restart complete reset reverse",
-      markers: true,
+      markers: false,
     },
   })
   .to("#MarieCh06", {
