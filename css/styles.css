@@ -146,6 +146,32 @@ section#Ch05 {
   background-attachment: scroll;
   background-position: 50% 0%;
 }
+div#parallax-bg-1 {
+  border: 2px solid red;
+  position: fixed; /*les balises enfants vont se positionner par rapport à ce div-ci*/
+  width: 1200px;
+  top: 3px;
+  left: 50%;
+  margin-left: -600px;
+}
+div#parallax-bg-1 div {
+  background: url("../assets/img/img_element_visuels/fly.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-size: cover;
+  border: 1px solid green;
+  top: -100vh;
+  left: -100vw;
+}
+div#bg-1-1 {
+  background: url("../assets/img/img_element_visuels/fly.png");
+  width: 100vw;
+  height: 100vh;
+}
 
 /* Styles chapitre 6*/
 section#Ch06 {
@@ -327,8 +353,8 @@ input[type="checkbox"]::after {
   animation-name: openingEyes;
   animation-duration: 2s;
   animation-play-state: paused;
+  animation-iteration-count: infinite;
   animation-timing-function: steps(24);
-  border: solid red;
 }
 
 @keyframes openingEyes {
@@ -490,6 +516,35 @@ svg#morph {
 
 /* Animation Chapitre 5 Styles */
 /* Animation Chapitre 6 Styles */
+
+#MarieCh06 {
+  position: absolute;
+  bottom: 0;
+  left: -20vw;
+  width: 30vw;
+  aspect-ratio: 1 / 1;
+  background-image: url(../assets/img/img_personnages/Mariespritesheet.png);
+  background-size: 2700% 100%;
+  z-index: 1;
+  margin: 0 auto;
+  animation-name: Marie06;
+  animation-duration: 1s;
+  animation-play-state: paused;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(27);
+}
+@keyframes Marie06 {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -2700% 0;
+  }
+}
+
+.is-scrolling #MarieCh06 {
+  animation-play-state: running;
+}
 
 .FloorBlood {
   width: 20vw;

@@ -1,5 +1,5 @@
 console.clear();
-gsap.registerPlugin(ScrollTrigger, MotionPathPlugin, DrawSVGPlugin);
+gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
 const body = document.querySelector("body");
 
@@ -258,16 +258,7 @@ gsap
     duration: 5,
     x: -1000,
   })
-  .fromTo(
-    "#QuestionMark",
-    {
-      drawSVG: "0% 0%",
-    },
-    {
-      drawSVG: "0 100%",
-      duration: 2,
-    }
-  )
+
   .to("#QuestionMark", {
     duration: 10,
     morphSVG: "#ExclamationPoint",
@@ -372,7 +363,7 @@ gsap
   })
   .from(".MonsterArm", {
     opacity: 0,
-    y: 1000,
+    y: 500,
   })
   .to(
     ".MonsterArm",
@@ -386,7 +377,7 @@ gsap
     duration: "4",
     rotation: "-150deg",
     x: -500,
-    y: 500,
+    y: 900,
   })
   .to(
     ".blood",
@@ -413,7 +404,7 @@ gsap
     duration: "4",
     rotation: "-150deg",
     x: -500,
-    y: 500,
+    y: 900,
   })
   .from(".blood02", {
     scale: 0,
@@ -437,6 +428,7 @@ gsap
       start: "top bottom",
       end: "bottom top",
       scrub: true,
+      pin: true,
       toggleActions: "restart complete reset reverse",
       markers: true,
     },
@@ -465,6 +457,9 @@ gsap
       markers: true,
     },
   })
+  .to("#MarieCh06", {
+    x: 500,
+  })
   .from(".chapterText", {
     duration: 1,
     opacity: 0,
@@ -482,6 +477,7 @@ gsap.to(".mouse", {
   rotation: "180",
   stagger: "0.1",
   repeat: "-1",
+  yoyo: true,
 });
 
 document.addEventListener("click", function () {
