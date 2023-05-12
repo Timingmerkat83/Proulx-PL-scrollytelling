@@ -21,8 +21,8 @@
     <h1 class="title">Je te vois Julia</h1>
 
     <div class="cta">
-      <img class="scrollmouse" src="assets/img/img_element_visuels/scroll.png" width="100px;">
-      <img class="mouse" src="assets/img/img_element_visuels/scroll2.png" width="60px;">
+      <img class="scrollmouse" src="assets/img/img_element_visuels/scroll.png" width="100px;" alt="Scroll">
+      <img class="mouse" src="assets/img/img_element_visuels/scroll2.png" width="60px;" alt="Mouse">
       <h2 class="glow">Défilez</h2>
     </div>
     <div class="description">
@@ -60,11 +60,11 @@
           <div class="chapterText">
             <p>Julia et Marie, les 2 meilleures amies, sont invités à séjourner dans un auberge en Floride</p>
           </div>
-          <img class="leaf no1" src="assets/img/img_element_visuels/dion_proulx_feuille_582-424.svg">
-          <img class="leaf no2" src="assets/img/img_element_visuels/dion_proulx_feuille_582-424.svg">
-          <img class="leaf no3" src="assets/img/img_element_visuels/dion_proulx_feuille_582-424.svg">
-          <img class="leaf no4" src="assets/img/img_element_visuels/dion_proulx_feuille_582-424.svg">
-          <img class="leaf no5" src="assets/img/img_element_visuels/dion_proulx_feuille_582-424.svg">
+          <img class="leaf no1" src="assets/img/img_element_visuels/dion_proulx_feuille_582-424.svg" alt="Feuilles">
+          <img class="leaf no2" src="assets/img/img_element_visuels/dion_proulx_feuille_582-424.svg" alt="Feuilles">
+          <img class="leaf no3" src="assets/img/img_element_visuels/dion_proulx_feuille_582-424.svg" alt="Feuilles">
+          <img class="leaf no4" src="assets/img/img_element_visuels/dion_proulx_feuille_582-424.svg" alt="Feuilles">
+          <img class="leaf no5" src="assets/img/img_element_visuels/dion_proulx_feuille_582-424.svg" alt="Feuilles">
 
           <div id="house" class="SpriteSheet"></div>
           <div id="Julia" class="SpriteSheet"></div>
@@ -72,7 +72,8 @@
         </div>
       </div>
       <img
-        src="assets/img/img_element_visuels/dion_proulx_elements_lineaire_582-424/dion_proulx_element_lineaire_01_582-424.png">
+        src="assets/img/img_element_visuels/dion_proulx_elements_lineaire_582-424/dion_proulx_element_lineaire_01_582-424.png"
+        alt="Ligne">
     </section>
     <!-- Chapitre 2-->
     <section id="Ch02">
@@ -106,8 +107,19 @@
     <!-- Chapitre 3-->
     <section id="Ch03">
       <ul class="technique-gsap">
-        <li>...</li>
-        <li>...</li>
+        <li>Monster Eyes</li>
+        <ul>
+          <li>
+            Opacity
+          </li>
+        </ul>
+        <li>Door</li>
+        <ul>
+          <li>
+            X axe
+          </li>
+          <li>Rotate</li>
+        </ul>
         <li>scrollTrigger
           <ul>
             <li>trigger=</li>
@@ -184,8 +196,6 @@
     <!-- Chapitre 5-->
     <section id="Ch05">
       <ul class="technique-gsap">
-        <li>...</li>
-        <li>...</li>
         <li>scrollTrigger
           <ul>
             <li>trigger=</li>
@@ -211,13 +221,12 @@
     <!-- Chapitre 6-->
     <section id="Ch06">
       <ul class="technique-gsap">
-        <li>...</li>
-        <li>...</li>
-        <li>scrollTrigger
-          <ul>
-            <li>trigger=</li>
-            <li>...</li>
-          </ul>
+        <li>scrollTrigger</li>
+        <ul>
+          <li>trigger=</li>
+          <li>Pin</li>
+          <li>Scrub</li>
+        </ul>
         </li>
       </ul>
       <div class="banner">
@@ -241,13 +250,6 @@
       <p>Fin...?</p>
     </div>
   </main>
-
-  <fieldset>
-    <div id="fullscreen-div">
-      <input type="checkbox" class="toggle-fullscreen-btn" id="option1">
-    </div>
-  </fieldset>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
   <!--Script pour motion path -->
@@ -258,7 +260,7 @@
   <script src="vendors/gsap-plugiciels-payants-nepaspubliersurgit/GSDevTools3.min.js"></script>
   <script src="vendors/gsap-plugiciels-payants-nepaspubliersurgit/MorphSVGPlugin3.min.js"></script>
   <script src="script/script.js"></script>
-  <script src="script/fullscreen.js"></script>
+
 
 </body>
 
