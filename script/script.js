@@ -3,6 +3,7 @@ gsap.registerPlugin(ScrollTrigger, MotionPathPlugin, DrawSVGPlugin);
 
 const body = document.querySelector("body");
 
+let event;
 window.addEventListener("scroll", (event) => {
   body.classList.add("is-scrolling");
   setTimeout(function () {
@@ -37,6 +38,7 @@ gsap
       scrub: true,
       start: "top top",
       end: "100% top",
+      toggleActions: "restart complete reset reverse",
       markers: true,
     },
   })
@@ -150,6 +152,7 @@ gsap
       scrub: true,
       start: "top top",
       end: "200% top",
+      toggleActions: "restart complete reset reverse",
       markers: true,
     },
   })
@@ -197,6 +200,7 @@ gsap
       scrub: true,
       start: "top top",
       end: "100% top",
+      toggleActions: "restart complete reset reverse",
       markers: true,
     },
   })
@@ -239,6 +243,7 @@ gsap
       start: "top top",
       end: "200% top",
       markers: true,
+      toggleActions: "restart complete reset reverse",
       ease: "none",
     },
   })
@@ -288,6 +293,7 @@ gsap
     ">"
   )
   .to("#JuliaFace", {
+    duration: 5,
     x: 200,
   })
   .to(
@@ -431,6 +437,7 @@ gsap
       start: "top bottom",
       end: "bottom top",
       scrub: true,
+      toggleActions: "restart complete reset reverse",
       markers: true,
     },
   })
@@ -454,6 +461,7 @@ gsap
       scrub: 0.5,
       start: "top top",
       end: "+=100%",
+      toggleActions: "restart complete reset reverse",
       markers: true,
     },
   })
