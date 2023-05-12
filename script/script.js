@@ -258,8 +258,11 @@ gsap
     duration: 5,
     x: -1000,
   })
-
   .to("#QuestionMark", {
+    opacity: 0,
+  })
+  .to("#QuestionMark", {
+    opacity: 1,
     duration: 10,
     morphSVG: "#ExclamationPoint",
   })
