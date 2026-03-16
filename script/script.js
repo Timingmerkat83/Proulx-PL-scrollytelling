@@ -29,7 +29,7 @@ let chapter04 = document.querySelector("#Ch04");
 let chapter05 = document.querySelector("#Ch05");
 let chapter06 = document.querySelector("#Ch06");
 
-/* Animation chapitre 1 */
+/* Animation du chapitre 1 */
 gsap
   .timeline({
     scrollTrigger: {
