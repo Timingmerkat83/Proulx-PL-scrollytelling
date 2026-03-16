@@ -1,5 +1,5 @@
 // Ce fichier est uniquement un test pour le morphing
-//gsap.registerPlugin(MorphSVGPlugin);
+gsap.registerPlugin(MorphSVGPlugin);
 
 //let anim = gsap.to("#QuestionMark", {
 //  morphSVG: "#ExclamationPoint",
