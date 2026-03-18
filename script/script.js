@@ -61,7 +61,7 @@ ch1
   .to("#Marie", {
     transformOrigin: "0 0",
     motionPath: {
-      path: [{ x: 100, y: 0 }, { x: 20, y: -100 }]
+      path: [{ x: 100, y: 0 }, { x: 20, y: -150 }]
     },
     scale: 0.3,
     x: -40,
@@ -71,7 +71,7 @@ ch1
   .to("#Julia", {
     transformOrigin: "0 0",
     motionPath: {
-      path: [{ x: 100, y: 0 }, { x: 20, y: -100 }]
+      path: [{ x: 100, y: 0 }, { x: 20, y: -130 }]
     },
     scale: 0.3,
     duration: 8
@@ -94,7 +94,6 @@ gsap.utils.toArray(".leaf").forEach((leaf, i) => {
     ease: "none"
   });
 });
-
 /* ------------------------------
    Chapter 2
 ------------------------------ */
@@ -105,9 +104,9 @@ ch2
   .to(chapterText, { opacity: 1 })
   .to("#Ch02", { scale: 1.5, duration: 4 }, 2)
   .from(".Arm", { y: 1000, rotate: 80 })
-  .to(".Arm", { y: -100, rotate: 50, duration: 3, ease: "none" })
-  .to(".Arm", { skewY: -20, ease: "none" })
-  .to(".Arm", { skewY: 0, duration: 3, repeat: 2, ease: "none" });
+  .to(".Arm", { y: -100, rotate: 50, duration: 3, ease: "slow" })
+  .to(".Arm", { skewY: -20, ease: "rough" })
+  .to(".Arm", { skewY: 0, duration: 3, repeat: 2, ease: "slow" });
 
 /* ------------------------------
    Chapter 3
