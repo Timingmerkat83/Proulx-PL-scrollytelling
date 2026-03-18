@@ -190,15 +190,110 @@ ch4
   .to(".blood02", { scale: 1, duration: 2 }, "-=1");
 
 /* ------------------------------
-   Chapter 5
+   Chapter 5 (Parallax + Transition)
 ------------------------------ */
-createScrollTimeline("#Ch05", {
-  start: "top bottom",
-  end: "bottom top"
-})
-  .from(chapterText, { opacity: 0 })
-  .to(chapterText, { opacity: 1 });
 
+const qCh05 = gsap.utils.selector("#Ch05");
+
+/* --- Fade transition from Chapter 4 → 5 --- */
+gsap.to("#Ch04", {
+  opacity: 0,
+  scale: 0.95,
+  filter: "blur(8px)",
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#Ch05",
+    start: "top 75%",
+    end: "top 25%",
+    scrub: true
+  }
+});
+
+gsap.fromTo("#Ch05",
+  {
+    opacity: 0,
+    scale: 1.05,
+    filter: "blur(8px)"
+  },
+  {
+    opacity: 1,
+    scale: 1,
+    filter: "blur(0px)",
+    ease: "none",
+    scrollTrigger: {
+      trigger: "#Ch05",
+      start: "top 75%",
+      end: "top 25%",
+      scrub: true
+    }
+  }
+);
+
+/* --- Main Chapter 5 timeline --- */
+const ch5 = createScrollTimeline("#Ch05", {
+  start: "top bottom",
+  end: "bottom top",
+  scrub: 0.5
+});
+
+/* Text animation (scoped) */
+ch5
+  .from(qCh05(".chapterText"), { opacity: 0, y: 50 })
+  .to(qCh05(".chapterText"), { opacity: 1, y: 0 });
+
+/* --- Parallax system (based on data-vitesse) --- */
+gsap.utils.toArray("#Ch05 .parallax-bg").forEach((layer) => {
+  const speed = parseFloat(layer.dataset.vitesse) || 0.3;
+
+  gsap.to(layer, {
+    y: () => -window.innerHeight * speed,
+    x: () => 40 * speed, // slight horizontal drift
+    ease: "none",
+    scrollTrigger: {
+      trigger: "#Ch05",
+      start: "top bottom",
+      end: "bottom top",
+      scrub: true
+    }
+  });
+});
+
+/* --- Extra depth on inner elements --- */
+gsap.to("#bg-1-1", {
+  y: -80,
+  scrollTrigger: {
+    trigger: "#Ch05",
+    scrub: true
+  }
+});
+
+gsap.to("#bg-2-2", {
+  y: -150,
+  scrollTrigger: {
+    trigger: "#Ch05",
+    scrub: true
+  }
+});
+
+/* --- Subtle horror atmosphere --- */
+
+// slow “breathing” zoom
+gsap.to("#Ch05", {
+  scale: 1.01,
+  repeat: -1,
+  yoyo: true,
+  duration: 3,
+  ease: "sine.inOut"
+});
+
+// slight unsettling skew on layers
+gsap.to("#Ch05 .parallax-bg", {
+  skewY: 1.5,
+  repeat: -1,
+  yoyo: true,
+  duration: 2,
+  ease: "sine.inOut"
+});
 /* ------------------------------
    Chapter 6
 ------------------------------ */
