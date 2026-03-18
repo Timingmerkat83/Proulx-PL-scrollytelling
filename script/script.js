@@ -195,39 +195,6 @@ ch4
 
 const qCh05 = gsap.utils.selector("#Ch05");
 
-/* --- Fade transition from Chapter 4 → 5 --- */
-gsap.to("#Ch04", {
-  opacity: 0,
-  scale: 0.95,
-  filter: "blur(8px)",
-  ease: "none",
-  scrollTrigger: {
-    trigger: "#Ch05",
-    start: "top 75%",
-    end: "top 25%",
-    scrub: true
-  }
-});
-
-gsap.fromTo("#Ch05",
-  {
-    opacity: 0,
-    scale: 1.05,
-    filter: "blur(8px)"
-  },
-  {
-    opacity: 1,
-    scale: 1,
-    filter: "blur(0px)",
-    ease: "none",
-    scrollTrigger: {
-      trigger: "#Ch05",
-      start: "top 75%",
-      end: "top 25%",
-      scrub: true
-    }
-  }
-);
 
 /* --- Main Chapter 5 timeline --- */
 const ch5 = createScrollTimeline("#Ch05", {
