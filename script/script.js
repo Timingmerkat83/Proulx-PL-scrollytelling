@@ -45,6 +45,7 @@ function createScrollTimeline(trigger, options = {}) {
   });
 }
 
+
 /* ------------------------------
    Global Elements
 ------------------------------ */
